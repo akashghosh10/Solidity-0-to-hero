@@ -1,6 +1,6 @@
 //SPDX-License-Identifier: MIT
 
-pragma solidity ^0.8.20;
+pragma solidity ^0.8.19;
 
 contract Functions {
     //external or public functions means that we can call the function after the contract is deployed in a blockchain.
@@ -35,6 +35,22 @@ contract Functions {
     
     function pureFunc(uint x, uint y) public pure returns(uint) {
         return x + y; //since this function doesn't read from a blockchain, it is a pure function.
+    }
+
+    function assigned() public pure returns(uint x, bool y){
+        x=1;
+        y=true;
+        //returns statements can be omitted by using named variables in 'returns' in the function declaration and using them to
+        //store values inside the function. This implicitly returns the required values. 
+    }
+
+    function destructuredAssignments() public pure {
+        (uint x, bool y) = assigned();
+        //destructured assignments means using the output from an already existing function in the same contract in the body of
+        //another function.
+        x++;
+        //If only one of the values that a function returns is required, use the following line of code,
+        //(, bool y) = assigned();   -   This will take only the boolean output from assigned and assign it to y.
     }
 }
 
