@@ -41,7 +41,8 @@ contract Functions {
         x=1;
         y=true;
         //returns statements can be omitted by using named variables in 'returns' in the function declaration and using them to
-        //store values inside the function. This implicitly returns the required values. 
+        //store values inside the function. This implicitly returns the required values.
+        //This can help in saving gas.
     }
 
     function destructuredAssignments() public pure {
