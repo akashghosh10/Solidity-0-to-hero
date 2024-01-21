@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.19;
 
-//an enum enables us to have a constant predefined set of values for a variable
+//an enumerable enables us to have a constant predefined set of values for a variable
 
 contract Enum {
     // Enum representing shipping status
