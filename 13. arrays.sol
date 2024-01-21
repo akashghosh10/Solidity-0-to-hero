@@ -43,9 +43,11 @@ contract arrays {
         return nums.length; //returns the length of the array.
     }
 
-    //There are two ways of storing data in Solidity - Storage and Memory.
+    //<Refer to dataLocations.sol for details on storing data>
+    //There are 3 ways of storing data in Solidity - Storage, Memory and calldata.
     //Storage is used for storing something permanent. Ex - State variables and Local Variables of structs, array are always stored in storage by default.
-    //Memory is used for storin something temporary. Ex  - Function arguments are in memory.
+    //Memory is used for storing something temporary. Ex  - Function arguments are in memory.
+    //calldata is used for storing input to functions.
     //Storing data in storage can be expensive in terms of gas. So, it is better to use memory for doing computations and storing the final result in storage.
 
     function arrayInMemory() external pure {
