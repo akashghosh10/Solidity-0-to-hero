@@ -35,7 +35,7 @@ contract structs {
         carArray.push(lambo);
         carArray.push(tesla);
 
-        //NOTE - it is necessary toinitialise a struct in memory explicitly, it can be directly pushed in the array as shown below.
+        //NOTE - it is not necessary to initialise a struct in memory explicitly, it can be directly pushed in the array as shown below.
 
         carArray.push(car("Ferrari", 2020, msg.sender));
     }
