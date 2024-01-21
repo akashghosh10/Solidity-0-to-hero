@@ -37,7 +37,7 @@ contract structs {
 
         //NOTE - it is not necessary to initialise a struct in memory explicitly, it can be directly pushed in the array as shown below.
 
-        carArray.push(car("Ferrari", 2020, msg.sender));
+        carArray.push(car("Ferrari", 2020, msg.sender)); //initialisation done like function calls. But, as mentioned, order of the arguments is very important
     }
 
     function getStruct(uint _i) external view returns(string memory _model, uint _year, address _owner){ //memory is used for string, otherwise getting error
