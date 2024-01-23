@@ -57,10 +57,10 @@ contract D is B, C {
 }
 
 contract E is C, B {
-    // E.foo() returns "B"
     // since B is the right most parent contract with function foo()
     function foo() public pure override(C, B) returns (string memory) {
-        return super.foo();
+        return C.foo(); //This will call the foo() from contract C.
+        //Hence, foo() called from contract E will return 'C'
     }
 }
 
@@ -68,6 +68,9 @@ contract E is C, B {
 // Swapping the order of A and B will throw a compilation error.
 contract F is A, B {
     function foo() public pure override(A, B) returns (string memory) { //The order of A and B can be swapped here though. It won't make any difference.
-        return super.foo();
+        return super.foo(); //This will call the function foo() from both A & B.
+        //But, since B is called after A according to the roder of execution, foo() in this contract will return 'B'
     }
 }
+
+//If the keyword 'super' is used, it will call the function from from all the parent contracts.
