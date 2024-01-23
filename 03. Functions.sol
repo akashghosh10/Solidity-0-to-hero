@@ -55,8 +55,13 @@ contract Functions {
     }
 }
 
-// To sum up - 
-//External - uses less gas
-//Public - uses more gas
+// To sum up -
+
+//There are 4 types of visibilities in solidity - 
+//external - Can be called only from outside the contract. Uses less gas
+//public - Can be called from both inside and outside the contract. Uses more gas
+//internal - Can be called from inside the contract and by child contracts
+//private - can be called only from inside the contract
+
 //View - reads data from blockchain
 //Pure - doesn't read data from blockchain.
