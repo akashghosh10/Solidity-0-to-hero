@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.19;
 
-//Interfaces are used to call contracts whose code might be unknown to us or might be very large to copy and paste in our own contcat.
+//Interfaces are used to call contracts that are not present in the same solidity file, whose code might be unknown to us or might be very large to copy and paste in our own contract.
 //We can declare an interface and define functions in it to use the functions in the contract to be called and then call the interface in our contract.
 
 interface ICounter { //general naming conventions dictate that name of interface should be 'I' with the name of the contract to be called after that.
