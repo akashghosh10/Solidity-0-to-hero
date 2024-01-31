@@ -27,7 +27,7 @@ contract Caller { //contract that will call the callee function
 
     function setXFromAddress(address _addr, uint _x) public { //_addr is the address of the callee function
         Callee callee = Callee(_addr); //calling the 'Callee' contract stored in address '_addr'
-        //and assigning it to variable callee of type Callee(contract name is sued as type here)
+        //and assigning it to variable callee of type Callee(contract name is used as type here)
         callee.setX(_x); //using variable 'callee' to call setX by passing _x
     }
 
